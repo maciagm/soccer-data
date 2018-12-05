@@ -18,4 +18,4 @@ PL_dat <- inner_join(season_dat, teams, by = c("home_team_api_id" = "team_api_id
   rename(away_team = team_long_name) %>% 
   select(-home_team_api_id, -away_team_api_id)
 
-write.csv2(PL_dat, file = "PL_dat.csv")
+write.csv2(PL_dat, file = "PL_dat.csv", row.names = FALSE)
